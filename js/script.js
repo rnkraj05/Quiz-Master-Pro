@@ -197,38 +197,6 @@ quizForm.reset();
 
 }
 
-// Quiz Submission
-
-const quizAttemptForm =
-document.getElementById("quizAttemptForm");
-
-if(quizAttemptForm){
-
-quizAttemptForm.addEventListener("submit",(e)=>{
-
-e.preventDefault();
-
-let score = 0;
-
-const correctAnswers =
-document.querySelectorAll(
-'input[value="correct"]:checked'
-);
-
-score = correctAnswers.length;
-
-localStorage.setItem(
-"quizScore",
-score
-);
-
-window.location.href =
-"results.html";
-
-});
-
-}
-
 // Quiz Results
 
 const scoreDisplay =
@@ -321,65 +289,6 @@ registerForm.reset();
 });
 
 }
-
-const quizQuestions = [
-
-{
-question:"Java is a _____ ?",
-options:[
-"Programming Language",
-"Database",
-"Browser",
-"Operating System"
-],
-answer:"Programming Language"
-},
-
-{
-question:"AWS S3 is used for?",
-options:[
-"Cloud Storage",
-"Database",
-"Networking",
-"Virtual Machine"
-],
-answer:"Cloud Storage"
-},
-
-{
-question:"Which keyword creates an object?",
-options:[
-"class",
-"new",
-"void",
-"this"
-],
-answer:"new"
-},
-
-{
-question:"HTML stands for?",
-options:[
-"Hyper Text Markup Language",
-"High Text Machine Language",
-"Hyper Transfer Markup Language",
-"Home Tool Markup Language"
-],
-answer:"Hyper Text Markup Language"
-},
-
-{
-question:"CSS is used for?",
-options:[
-"Styling",
-"Database",
-"Programming",
-"Networking"
-],
-answer:"Styling"
-}
-
-];
 
 // =====================
 // Dynamic Quiz System
