@@ -239,7 +239,8 @@ if(scoreDisplay){
 const score =
 localStorage.getItem("quizScore") || 0;
 
-const totalQuestions = 5;
+const totalQuestions =
+Number(localStorage.getItem("quizTotal")) || 3;
 
 const percentage =
 (score / totalQuestions) * 100;
